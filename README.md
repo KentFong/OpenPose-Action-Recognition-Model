@@ -23,36 +23,24 @@ A skeleton-based real-time online action recognition project, classifying and re
  
 ------
 ## Usage
- - Download the openpose VGG tf-model with command line `./download.sh`(/Pose/graph_models/VGG_origin) or fork [here](https://pan.baidu.com/s/1XT8pHtNP1FQs3BPHgD5f-A#list/path=%2Fsharelink1864347102-902260820936546%2Fopenpose%2Fopenpose%20graph%20model%20coco&parentPath=%2Fsharelink1864347102-902260820936546), and place it under the corresponding folder; 
- - `python main.py`, it will **start the webcam**. 
- (you can choose to test video with command `python main.py --video=test.mp4`, however I just tested the webcam mode)   
- - By the way, you can choose different openpose pretrained model in script.    
- **VGG_origin**: training with the VGG net, as same as the CMU providing caffemodel, more accurate but slower, **mobilenet_thin**:  training with the Mobilenet, much smaller than the origin VGG, faster but less accurate.   
- **However, Please attention that the Action Dataset in this repo is collected along with the** ***VGG model*** **running**.
+ - Put your test videos into a directory and copy the directory path.
+ - Open your terminal (command prompt), and change the directory to where the action recognition directory is located. Do this by copying the path of where the action recognition  directory is located, then run the following command in the terminal:
+$ cd <path>
+ -  In the same command line window from the previous section, run the following line:
+$ python3 main.py --video <video_name> --model <model_name>
+ - After running the steps stated above, the results will soon show up on your screen.
 
+## Explanation of the Parameters
+● --video
+File path to the input video. The path should exist and the file extension should be included as well. For example, “punching.mp4”, instead of “punching”
+● --model
+File path to the saved trained model for action recognition. There is no default value for this parameter, therefore a model must be used. The file extension should be included.
 
 ------
 ## Training with own dataset
  - prepare data(actions) by running `openpose_coco.py`.
  - transforming the `.txt` to `.csv`, you can use EXCEL to do this.
  - do the training with the `traing.py` in `Action/training/`, remember to ***change the action_enum and output-layer of model***.
- 
- 
-------
-## Test result
- - ***actions detection***
-<p align="center">
-    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_test_out.gif", width="540">
- 
- - ***work surveilence***
-<p align="center">
-    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_under_scene-1.gif", width="540">
-<p align="center">
-    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_under_scene-2.gif", width="540">
- 
-  - ***multi people***
- <p align="center">
-    <img src="https://github.com/LZQthePlane/Online-Realtime-Action-Recognition-based-on-OpenPose/blob/master/test_out/webcam_multi-people.gif", width="540">
  
 
 -------
