@@ -56,3 +56,4 @@ Thanks to the following awesome works:
  - [tf-pose-estimation](https://github.com/ildoonet/tf-pose-estimation)   
  - [deep_sort_yolov3](https://github.com/Qidian213/deep_sort_yolov3)    
  - [Real-Time-Action-Recognition](https://github.com/TianzhongSong/Real-Time-Action-Recognition)
+ - Full dataset can be found here : https://doi.org/10.3390/drones3040082 
