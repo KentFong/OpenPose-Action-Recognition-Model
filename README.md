@@ -1,8 +1,6 @@
 # OpenPose-Action-Recognition-Model
 
-# Online-Realtime-Action-Recognition-based-on-OpenPose
 A skeleton-based real-time online action recognition project, classifying and recognizing base on framewise joints, which can be used for safety monitoring..   
-(The code comments are partly descibed in chinese)
 
 
 ------
